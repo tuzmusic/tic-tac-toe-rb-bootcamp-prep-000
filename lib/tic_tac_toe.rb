@@ -60,8 +60,7 @@ def current_player(board)
 end
 
 def play(board)
-  puts("Please enter a number (1-9):")
-  gets.strip
+  turn(board)
 end
 
 def won?(board)
