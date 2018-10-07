@@ -50,4 +50,3 @@ def winner(board)
     return board[winner[0]]
   end
 end
-
