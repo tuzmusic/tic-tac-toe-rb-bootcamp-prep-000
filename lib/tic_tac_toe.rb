@@ -35,6 +35,19 @@ def valid_move? (board, index)
   return index.between?(0, board.size) && !position_taken?(board, index)
 end
 
+
+def turn(board)
+  puts("Please enter 1-9:")
+  i = gets.strip
+  index = input_to_index(i)
+  if valid_move?(board, index)
+    move(board, index, "X")
+    display_board(board)
+  else
+    turn(board)
+  end
+end
+
 def won?(board)
   WIN_COMBINATIONS.detect do |winRow|
     winRow.all? {|spot| board[spot] == "X"} || winRow.all? {|spot| board[spot] == "O"}
