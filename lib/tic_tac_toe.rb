@@ -23,6 +23,10 @@ def display_board(b)
   puts(" #{b[6]} | #{b[7]} | #{b[8]} ")
 end
 
+def input_to_index(i)
+  i.to_i - 1
+end
+
 def won?(board)
   WIN_COMBINATIONS.detect do |winRow|
     winRow.all? {|spot| board[spot] == "X"} || winRow.all? {|spot| board[spot] == "O"}
@@ -46,3 +50,4 @@ def winner(board)
     return board[winner[0]]
   end
 end
+
