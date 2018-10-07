@@ -35,7 +35,6 @@ def valid_move? (board, index)
   return index.between?(0, board.size) && !position_taken?(board, index)
 end
 
-
 def turn(board)
   puts("Please enter 1-9:")
   i = gets.strip
@@ -58,6 +57,11 @@ end
 
 def current_player(board)
   return turn_count(board) % 2 == 0 ? "X" : "O"
+end
+
+def play(board)
+  puts("Please enter a number (1-9):")
+  gets.strip
 end
 
 def won?(board)
