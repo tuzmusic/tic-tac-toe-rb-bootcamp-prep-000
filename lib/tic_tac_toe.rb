@@ -62,6 +62,11 @@ def play(board)
   until over?(board)
     turn(board)
   end
+  if winner(board)
+    puts("Congratulations #{winner}")
+  elsif draw?(board)
+    puts("It's a draw!")
+  end
 end
 
 def won?(board)
