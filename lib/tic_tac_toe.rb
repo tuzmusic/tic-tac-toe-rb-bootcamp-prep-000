@@ -31,6 +31,10 @@ def move(board, index, char)
   board[index] = char
 end
 
+def valid_move? (board, index)
+  return index.between?(0, board.size) && !position_taken?(board, index)
+end
+
 def won?(board)
   WIN_COMBINATIONS.detect do |winRow|
     winRow.all? {|spot| board[spot] == "X"} || winRow.all? {|spot| board[spot] == "O"}
