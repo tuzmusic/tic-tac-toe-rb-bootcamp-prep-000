@@ -59,6 +59,8 @@ def current_player(board)
 end
 
 def play(board)
+  puts("Please enter 1-9:")
+
   if over?(board)
     turn(board)
   end
