@@ -27,6 +27,10 @@ def input_to_index(i)
   i.to_i - 1
 end
 
+def move(board, index, char)
+  board[index] = char
+end
+
 def won?(board)
   WIN_COMBINATIONS.detect do |winRow|
     winRow.all? {|spot| board[spot] == "X"} || winRow.all? {|spot| board[spot] == "O"}
