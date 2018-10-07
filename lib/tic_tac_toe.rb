@@ -59,7 +59,7 @@ end
 def play(board)
   puts("Please enter 1-9:")
   index = input_to_index(gets.strip)
-  turn(board)
+  turn(board, index)
   if over?(board)
     turn(board, index)
   end
